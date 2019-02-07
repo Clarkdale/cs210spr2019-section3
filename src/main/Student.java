@@ -21,6 +21,7 @@ public class Student {
 		this.setMajor("Undeclared");
 		this.setCreditsCompleted(0);
 		this.setEnrolled(new ArrayList<>());
+		this.setTranscript(new Transcript());
 	}
 	
 	public Student(String first, String last, int id, int credits) {
@@ -31,6 +32,7 @@ public class Student {
 		this.setMajor("Undeclared");
 		this.setCreditsCompleted(credits);
 		this.setEnrolled(new ArrayList<>());
+		this.setTranscript(new Transcript());
 	}
 	
 	public void addClass(Class in) {
@@ -107,5 +109,9 @@ public class Student {
 
 	public void setTranscript(Transcript transcript) {
 		this.transcript = transcript;
+	}
+	
+	public String toString() {
+		return this.firstName + this.lastName;
 	}
 }

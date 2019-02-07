@@ -101,4 +101,13 @@ public class Class {
 			return false;
 		}
 	}
+	
+	public String toString() {
+		String output = "";
+		output += this.dept;
+		output += " " + this.number + ": ";
+		output += this.className + " | ";
+		output += "Credits: " + this.credits;
+		return output;
+	}
 }

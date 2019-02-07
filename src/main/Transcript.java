@@ -38,7 +38,7 @@ public class Transcript {
 			}
 			
 			gpa += gpaVal;
-			total++;
+			total += key.getCredits();
 		}
 		gpa /= total;
 	}
@@ -57,5 +57,19 @@ public class Transcript {
 
 	public void setGpa(double gpa) {
 		this.gpa = gpa;
+	}
+	
+	public String toString() {
+		String output = "";
+		for (Class course : this.complete.keySet()) {
+			output += course.toString() + " | Grade: ";
+			output += this.complete.get(course);
+			output += "\n";
+		}
+		
+		output += "\n";
+		output += "Overall GPA: ";
+		output += this.gpa + "\n";
+		return output;
 	}
 }
