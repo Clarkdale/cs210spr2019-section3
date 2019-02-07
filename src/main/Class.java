@@ -28,6 +28,7 @@ public class Class {
 		this.setCapacity(cap);
 		this.setEnrolled(0);
 	}
+
 	
 	public boolean open() {
 		return enrolled < capacity;
@@ -91,5 +92,13 @@ public class Class {
 
 	public void setEnrolled(int enrolled) {
 		this.enrolled = enrolled;
+	}
+
+	public boolean equals(Class other) {
+		if (other.getDepartment().equals(this.dept) && other.getNumber() == this.number) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }
