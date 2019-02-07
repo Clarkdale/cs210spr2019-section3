@@ -47,8 +47,9 @@ public class UAccess {
 			System.out.println("'transcript': show transcript");
 			System.out.println("'add': add a course");
 			System.out.println("'drop': drop a course");
+			System.out.println("'exit': exit program");
 			System.out.print("\nWhat would you like to do next? ");
-			decision = input.next().toLowerCase();
+			decision = input.nextLine().toLowerCase();
 			
 			if (decision.equals("courses")) {
 				for (String each : classes.keySet()) {
@@ -72,10 +73,11 @@ public class UAccess {
 				String val = input.nextLine();
 				
 				current.dropClass(classes.get(val));
-			} else {
+			} else if (!decision.equals("exit")) {
 				System.out.println("Unrecognized Command.");
 			}
 		}
 		
+		System.out.println("Logged out of UAuth Successfully");
 	}
 }
