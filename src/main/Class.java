@@ -6,36 +6,21 @@ public class Class {
 	private int credits;
 	private int number;
 	private String staff;
-	private int capacity;
-	private int enrolled;
 	
-	public Class(String department, String name, int numCredits, int courseNumber, int cap) {
+	public Class(String department, String name, int numCredits, int courseNumber) {
 		this.setDepartment(department);
 		this.setClassName(name);
 		this.setCredits(numCredits);
 		this.setNumber(courseNumber);
 		this.setStaff("TBD");
-		this.setCapacity(cap);
-		this.setEnrolled(0);
 	}
 	
-	public Class(String department, String name, int numCredits, int courseNumber, int cap, String faculty) {
+	public Class(String department, String name, int numCredits, int courseNumber, String faculty) {
 		this.setDepartment(department);
 		this.setClassName(name);
 		this.setCredits(numCredits);
 		this.setNumber(courseNumber);
 		this.setStaff(faculty);
-		this.setCapacity(cap);
-		this.setEnrolled(0);
-	}
-
-	
-	public boolean open() {
-		return enrolled < capacity;
-	}
-	
-	public void enroll() {
-		this.enrolled++;
 	}
 
 	public String getDepartment() {
@@ -76,22 +61,6 @@ public class Class {
 
 	public void setStaff(String staff) {
 		this.staff = staff;
-	}
-
-	public int getCapacity() {
-		return capacity;
-	}
-
-	public void setCapacity(int capacity) {
-		this.capacity = capacity;
-	}
-
-	public int getEnrolled() {
-		return enrolled;
-	}
-
-	public void setEnrolled(int enrolled) {
-		this.enrolled = enrolled;
 	}
 
 	public boolean equals(Class other) {

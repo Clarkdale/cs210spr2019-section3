@@ -9,9 +9,9 @@ public class UAccess {
 		Map<String, Student> students = new HashMap<>();
 		Map<String, Class> classes = new HashMap<>();
 		
-		Class cs110 = new Class("CSC", "Intro to Computer Programming 1", 4, 110, 100, "Ben Dicken");
-		Class cs120 = new Class("CSC", "Intro to Computer Programming 2", 4, 120, 100, "Janalee O'bagy");
-		Class cs210 = new Class("CSC", "Software Development", 4, 210, 100, "Tyler Conklin");
+		Class cs110 = new Class("CSC", "Intro to Computer Programming 1", 4, 110, "Ben Dicken");
+		Class cs120 = new Class("CSC", "Intro to Computer Programming 2", 4, 120, "Janalee O'bagy");
+		Class cs210 = new Class("CSC", "Software Development", 4, 210, "Tyler Conklin");
 		
 		classes.put("CSC " + cs110.getNumber(), cs110);
 		classes.put("CSC " + cs120.getNumber(), cs120);
