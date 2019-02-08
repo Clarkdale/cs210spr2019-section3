@@ -64,6 +64,8 @@ public class Class {
 	}
 
 	public boolean equals(Class other) {
+		// if another class has the same dept and course number, they are the same.
+		// Return true, otherwise return false
 		if (other.getDepartment().equals(this.dept) && other.getNumber() == this.number) {
 			return true;
 		} else {

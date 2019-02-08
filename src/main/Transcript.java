@@ -13,11 +13,13 @@ public class Transcript {
 	}
 	
 	public void addClass(Class course, char grade) {
+		// add class to transcript
 		complete.put(course, grade);
 		char currGrade;
 		int gpaVal;
 		int total = 0;
 		gpa = 0;
+		// parse over every class including new one, and recalculate GPA
 		for (Class key : complete.keySet()) {
 			currGrade = complete.get(key);
 			switch (currGrade) {
@@ -40,6 +42,7 @@ public class Transcript {
 			gpa += gpaVal;
 			total += key.getCredits();
 		}
+		// final division
 		gpa /= total;
 	}
 
@@ -61,12 +64,14 @@ public class Transcript {
 	
 	public String toString() {
 		String output = "";
+		// add course information to output string
 		for (Class course : this.complete.keySet()) {
 			output += course.toString() + " | Grade: ";
 			output += this.complete.get(course);
 			output += "\n";
 		}
 		
+		// add final gpa to output string
 		output += "\n";
 		output += "Overall GPA: ";
 		output += this.gpa + "\n";

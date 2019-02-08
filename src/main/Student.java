@@ -27,10 +27,13 @@ public class Student {
 	}
 	
 	public void addClass(Class in) {
+		// add class to list
 		this.enrolled.add(in);
 	}
 	
 	public void dropClass(Class in) {
+		// parse over all courses, and delete the one that is the same
+		// in the list
 		for (int i = 0; i < enrolled.size(); i++) {
 			if (enrolled.get(i).equals(in)) {
 				enrolled.remove(i);
