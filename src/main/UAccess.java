@@ -8,8 +8,8 @@ public class UAccess {
 	public static void main(String [] args) {
 		
 		// Collections of students and classes to keep track of data
-		Map<String, Student> students = new HashMap<>();
-		Map<String, Class> classes = new HashMap<>();
+		HashMap<String, Student> students = new HashMap<>();
+		HashMap<String, Class> classes = new HashMap<>();
 		
 		// creation and storing of cs courses
 		Class cs110 = new Class("CSC", "Intro to Computer Programming 1", 4, 110, "Ben Dicken");
@@ -28,7 +28,7 @@ public class UAccess {
 		
 		System.out.print("Hello, welcome to UAccess! What is your name(first last)? ");
 		
-		String name = input.nextLine();
+		String name = input.next();
 		
 		// init initial student
 		Student current;
@@ -69,14 +69,14 @@ public class UAccess {
 					System.out.println(classes.get(each).toString());
 				}
 			} else if (decision.equals("transcript")) {
-				System.out.println(current.getTranscript().toString());
+				System.out.println(current.transcript.toString());
 			} else if (decision.equals("add")) {
 				// add classes if it exists in the system
 				System.out.print("Which class? ");
 				String val = input.nextLine();
 				System.out.println(val);
 				if (classes.containsKey(val)) {
-					current.addClass(classes.get(val));
+					current.enrolled.add(classes.get(val));
 					System.out.println("Successful");
 				} else {
 					System.out.println("Course not available");
@@ -87,7 +87,12 @@ public class UAccess {
 				System.out.print("Which class? ");
 				String val = input.nextLine();
 				
-				current.dropClass(classes.get(val));
+				for (int i = 0; i < current.enrolled.size(); i++) {
+					if (current.enrolled.get(i).equals(val)) {
+						current.enrolled.remove(i);
+					}
+				}
+				
 			} else if (!decision.equals("exit")) {
 				System.out.println("Unrecognized Command.");
 			}
