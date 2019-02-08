@@ -98,9 +98,6 @@ public class UAccess {
 			}
 		}
 		
-		// close scanner
-		input.close();
-		
 		System.out.println("Logged out of UAuth Successfully");
 	}
 }
