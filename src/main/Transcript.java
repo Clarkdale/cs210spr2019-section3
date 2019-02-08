@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Transcript {
-	private Map<Class, Character> complete;
+	private HashMap<Class, Character> complete;
 	private double gpa;
 	
 	public Transcript() {
@@ -46,11 +46,11 @@ public class Transcript {
 		gpa /= total;
 	}
 
-	public Map<Class, Character> getComplete() {
+	public HashMap<Class, Character> getComplete() {
 		return complete;
 	}
 
-	public void setComplete(Map<Class, Character> complete) {
+	public void setComplete(HashMap<Class, Character> complete) {
 		this.complete = complete;
 	}
 

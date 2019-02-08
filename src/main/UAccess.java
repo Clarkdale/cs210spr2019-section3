@@ -12,9 +12,12 @@ public class UAccess {
 		HashMap<String, Class> classes = new HashMap<>();
 		
 		// creation and storing of cs courses
-		Class cs110 = new Class("CSC", "Intro to Computer Programming 1", 4, 110, "Ben Dicken");
-		Class cs120 = new Class("CSC", "Intro to Computer Programming 2", 4, 120, "Janalee O'bagy");
-		Class cs210 = new Class("CSC", "Software Development", 4, 210, "Tyler Conklin");
+		Class cs110 = 
+					new Class("CSC", "Intro to Computer Programming 1", 4, 110, "Ben Dicken");
+		Class cs120 = 
+					new Class("CSC", "Intro to Computer Programming 2", 4, 120, "Janalee O'bagy");
+		Class cs210 = 
+					new Class("CSC", "Software Development", 4, 210, "Tyler Conklin");
 		
 		classes.put("CSC " + cs110.getNumber(), cs110);
 		classes.put("CSC " + cs120.getNumber(), cs120);
