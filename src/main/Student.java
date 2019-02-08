@@ -4,11 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Student {
+	// Style 1: camel casing in the student class
 	private String firstName;
 	private String lastName;
 	private int idNumber;
+	// style 2: using list interface
 	private List<Class> enrolled;
 	private Transcript transcript;
+	// style 3: using private instead of public instance variables
 	
 	public Student(String first, String last, int id) {
 		this.setFirstName(first);
@@ -18,6 +21,7 @@ public class Student {
 		this.setTranscript(new Transcript());
 	}
 	
+	// style 4: using meta overloading with different arguments
 	public Student(String first, String last, int id, Transcript transfer) {
 		this.setFirstName(first);
 		this.setLastName(last);
@@ -26,6 +30,7 @@ public class Student {
 		this.setTranscript(transfer);
 	}
 	
+	// style 5: using internal methods to handle logic
 	public void addClass(Class in) {
 		// add class to list
 		this.enrolled.add(in);
@@ -41,6 +46,7 @@ public class Student {
 		}
 	}
 
+	// style 1: getters and setters for accessing variables
 	public String getFirstName() {
 		return firstName;
 	}

@@ -8,6 +8,8 @@ public class UAccess {
 	public static void main(String [] args) {
 		
 		// Collections of students and classes to keep track of data
+		
+		// style 6: using map interface
 		Map<String, Student> students = new HashMap<>();
 		Map<String, Class> classes = new HashMap<>();
 		
@@ -28,6 +30,7 @@ public class UAccess {
 		
 		System.out.print("Hello, welcome to UAccess! What is your name(first last)? ");
 		
+		// SOLUTION TO BUG
 		String name = input.nextLine();
 		
 		// init initial student
@@ -70,6 +73,8 @@ public class UAccess {
 				}
 			} else if (decision.equals("transcript")) {
 				System.out.println(current.getTranscript().toString());
+				
+			// style 5: using internal methods to handle logic
 			} else if (decision.equals("add")) {
 				// add classes if it exists in the system
 				System.out.print("Which class? ");
@@ -93,7 +98,7 @@ public class UAccess {
 			}
 		}
 		
-		// close scanner
+		// Style 7: close scanner
 		input.close();
 		
 		System.out.println("Logged out of UAuth Successfully");

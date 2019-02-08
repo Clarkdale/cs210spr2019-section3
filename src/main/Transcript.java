@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Transcript {
+	// bonus style: use map interface here as well
 	private Map<Class, Character> complete;
 	private double gpa;
 	
